@@ -16,6 +16,12 @@ Temos como objetivo nesse estudo produzir um MVP (produto mínimo viável) de um
 * [Astah](https://astah.net/)
 * [BrModel](https://www.brmodeloweb.com/lang/pt-br/index.html)
 
+## links Uteis 
+
+* [Confluence](https://flpinheiro.atlassian.net/wiki/spaces/ELDEXCHANG/overview)
+* [Jira](https://flpinheiro.atlassian.net/jira/software/projects/EEX/pages)
+* [Backend](https://github.com/EldExchange/Backend.git)
+
 ## O Problema 
 
 Você e sua equipe de desenvolvedores foram contratados por uma empresa pra fazer o sistema administrativo de uma empresa de câmbio. Será necessário desenvolver o sistema, com artefatos de modelagem do sistema e controle do backlog do desenvolvimento via sistema jira. Espera se que pelo menos a primeira versão seja entregue em no máximo 4 sprints ( 8 semanas), ou seja, até o início do ano. Todo o software deve ser escrito em inglês, incluindo documentação, artefatos, backlog e demais atividades executadas. Todos os artefatos devem ser adicionados em repositórios específicos do GitHub, a fim de buscar a organização e possibilitar a separação das estruturas do projeto. Os desenvolvedores devem utilizar gitflow como workflow de implementação de código, sendo vedado o push direto na master e na dev. 
