@@ -4,6 +4,10 @@ Está é uma atividade de treinamento apresentada a estagiária do instituto de 
 
 Temos como objetivo nesse estudo produzir um MVP (produto mínimo viável) de um sistema de agência de de câmbio (Exchange). 
 
+## Horário
+
+Quartas e Sextas de 13h até as 17h
+
 ## Ferramentas
 
 * [git](https://git-scm.com/)
@@ -15,6 +19,8 @@ Temos como objetivo nesse estudo produzir um MVP (produto mínimo viável) de um
 * [Visual Studio code](https://code.visualstudio.com/)
 * [Astah](https://astah.net/)
 * [BrModel](https://www.brmodeloweb.com/lang/pt-br/index.html)
+* [Versionize](https://github.com/versionize/versionize)
+* [conventional commit messages](https://conventionalcommits.org/)
 
 ## links Uteis 
 
@@ -53,5 +59,6 @@ O sistema será todo desenvolvido em dotnet 6 LTS (versão atual mais nova), dev
 * [Clear Cross-Cutting Concerns with Aspect Oriented Programming in .NET](https://visualstudiomagazine.com/articles/2011/05/12/wccsp_aspect-oriented-programming.aspx?m=1)
 
 * [Aspect-Oriented Programming : Aspect-Oriented Programming with the RealProxy Class](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/february/aspect-oriented-programming-aspect-oriented-programming-with-the-realproxy-class)
+
 * [Full Guide on How to Build an MVP](
 https://orangesoft.co/blog/how-to-build-mvp)
