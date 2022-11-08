@@ -22,6 +22,7 @@ Neste primeiro encontro temos por objetivos:
 * [Versionize](https://github.com/versionize/versionize)
 * [conventional commit messages](https://conventionalcommits.org/)
 
+
 ## Estrutura da Solução
 
 Construiremos uma solução Dotnet 6 buscando seguindo um modelo de projeto em camadas, onde buscamos seguir os principios do S.O.L.I.D. 
@@ -56,22 +57,30 @@ Algumas equipes gostam de incluir no cross-cutting definições de configuraçã
 
 ## Criando a Solução usando o CLI do dotnet
 
+Começando com o repositorios. Execute
+```
+git clone https://github.com/EldExchangeTeam/EldExchange.WebApi.git
+cd EldExchange.WebApi
+git branch feature/<nomebranch>
+git checkout feature/<nomebranch>
+```
+
 O Cli do dotnet é uma ferramenta muito poderosa e normalmente ignorada pela maioria dos novatos devido a grande facilidade de se usar o visual studio, que permite fazer tudo apenas selecionando um conjunto caixas de seleção e dando alguns poucos cliques, portanto, nesse primeiro momento faremos usso do cli do dotnet para demonstrar sua usabilidade.
 
 Vale resaltar que em processo de CI/CD o cli do dotnet é uma ferramente indispensável, sendo muitas vezes a única opção disponível, logo recomendamos fortemente o seu estudo.
 
 [.NET CLI overview](https://learn.microsoft.com/en-us/dotnet/core/tools/)
 
-1. Começamos criando a solução, com o uso da opção "-n EldExchange" definimos o nome da solução para "EldExchange" for ignorada a solução terá o nome da parta.
+1. Começamos criando a solução, com o uso da opção "-n EldExchange.WebApi" definimos o nome da solução para "EldExchange.WebApi" for ignorada a solução terá o nome da parta.
 
 ```
-dotnet new sln -n EldExchange
+dotnet new sln -n EldExchange.WebApi
 ```
 
 2. Para criarmos a RESTFull Web api usamos, assim iremos criar a tradicional webapi do WeatherForecast, com um controller e um model que em breve iremos deletar, essa opção é melhor do que a empty, pois já começa com o swagger configurado entre outras opções uteis.
 
 ```
-dotnet new webapi -n EldExchange -o EldExchange -f net6.0
+dotnet new webapi -n EldExchange.WebApi -o EldExchange.WebApi -f net6.0
 ```
 
 3. Para criarmos as bibliotecas de class
@@ -91,11 +100,11 @@ dotnet new xunit -n EldExchange.UnitTest -o EldExchange.UnitTest -f net6.0
 5. Para finalizar precisamos juntar tudo em uma única solução
 
 ```
-dotnet sln add EldExchange EldExchange
-dotnet sln add EldExchange EldExchange.Domain
-dotnet sln add EldExchange EldExchange.Infra
-dotnet sln add EldExchange EldExchange.CrossCutting
-dotnet sln add EldExchange EldExchange.UnitTest
+dotnet sln add EldExchange.WebApi
+dotnet sln add EldExchange.Domain
+dotnet sln add EldExchange.Infra
+dotnet sln add EldExchange.CrossCutting
+dotnet sln add EldExchange.UnitTest
 ```
 
 6. Para executar o programa use e basta ir em [https://localhost:7214/swagger](https://localhost:7214/swagger) ou em [http://localhost:5115/swagger](http://localhost:5115/swagger) de acordo com a figura para poder ver o programa executando, e use ctrl+C para parar a execução ou feche o console.
@@ -103,7 +112,10 @@ dotnet sln add EldExchange EldExchange.UnitTest
 ![dotnet run cli command result](../Imagens/dotnetrun.png)
 
 ```
-dotnet run --project .\EldExchange\EldExchange.csproj
+dotnet restore
+dotnet build
+dotnet test
+dotnet run --project .\EldExchange.WebApi\EldExchange.WebApi.csproj
 ```
 
 7. Ao abrir o Visual Studio ele deve está como, execute:
@@ -126,6 +138,14 @@ parabens você conclui com sucesso a criação de uma solução dotnet sem usar 
 
 Observe que todas as pastas foram colodas no plural, pela lógica de nomeclatura as classes destinadas a cada pasta deve respeitar a nomeclatura: \<Nome>+\<NomePasta>.cs, por exemplo: 
 PessoaService.cs, PessoaRepositorie.cs, PessoaDTO.cs. No caso das pastas IServices e IRepositories, esse "I" que inicia  o nome da pasta é completamente desnecessário, foi colocado aqui para lebrar da regrar de que toda interface em C\# começa com a letra "I", logo teremos: IPessoaService.cs, IPessoaRepository.cs.
+
+Agora que terminamos precisamos fazer
+```
+git status 
+git add -A
+git commit -m "Initial commit"
+git push  --set-upstream origin feature/estudos
+```
 
 ## Referências
 

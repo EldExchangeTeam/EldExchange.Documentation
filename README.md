@@ -26,7 +26,7 @@ Quartas e Sextas de 13h até as 17h
 
 * [Confluence](https://flpinheiro.atlassian.net/wiki/spaces/ELDEXCHANG/overview)
 * [Jira](https://flpinheiro.atlassian.net/jira/software/projects/EEX/pages)
-* [Backend](https://github.com/EldExchange/Backend.git)
+* [Backend](https://github.com/EldExchangeTeam/EldExchange.WebApi)
 
 ## O Problema 
 
